@@ -95,3 +95,13 @@ float realizarSaque(float saldo) {
     printf("\nValor do saque: R$ ");
     scanf("%f", &valor);
     while (getchar() != '\n');
+
+if (valor > 0 && valor <= saldo) {
+        saldo -= valor;
+        printf("Saque de R$ %.2f realizado!\n", valor);
+    } else {
+        printf("Erro: Saldo insuficiente ou valor nulo.\n");
+    }
+    esperarUsuario();
+    return saldo;
+}
