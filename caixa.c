@@ -89,3 +89,9 @@ float realizarDeposito(float saldo) {
     esperarUsuario();
     return saldo;
 }
+
+float realizarSaque(float saldo) {
+    float valor;
+    printf("\nValor do saque: R$ ");
+    scanf("%f", &valor);
+    while (getchar() != '\n');
