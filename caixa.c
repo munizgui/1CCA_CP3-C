@@ -74,3 +74,18 @@ void consultarSaldo(float saldo) {
     printf("-------------------\n");
     esperarUsuario();
 }
+float realizarDeposito(float saldo) {
+    float valor;
+    printf("\nDigite o valor do deposito: R$ ");
+    scanf("%f", &valor);
+    while (getchar() != '\n'); 
+
+    if (valor > 0) {
+        saldo += valor;
+        printf("Sucesso! Novo saldo: R$ %.2f\n", saldo);
+    } else {
+        printf("Valor invalido!\n");
+    }
+    esperarUsuario();
+    return saldo;
+}
