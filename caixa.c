@@ -14,5 +14,32 @@ int main() {
     do {
         limparTela();
         exibirMenu();
-    }
+    
+        if (scanf("%d", &opcao) != 1) {
+            while (getchar() != '\n'); 
+            opcao = -1;
+        }
+        while (getchar() != '\n');
+
+        switch(opcao) {
+            case 1:
+                consultarSaldo(saldo);
+                break;
+            case 2:
+                saldo = realizarSaque(saldo);
+                break;
+            case 3:
+                saldo = realizarDeposito(saldo);
+                break;
+            case 0:
+                printf("\nSaindo... Operacao encerrada.\n");
+                break;
+            default:
+                printf("\nOpcao Invalida!\n");
+                esperarUsuario();
+        }
+
+    } while(opcao != 0);
+
+    return 0;
 }
