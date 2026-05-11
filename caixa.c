@@ -55,3 +55,16 @@ void esperarUsuario() {
     printf("\nPressione ENTER para continuar...");
     getchar(); 
 }
+// função de exibição menu
+
+void exibirMenu() {
+    printf("========================\n");
+    printf("    ATM FIAP - 2026     \n");
+    printf("========================\n");
+    printf("1 - Consultar Saldo\n");
+    printf("2 - Realizar Saque\n");
+    printf("3 - Realizar Deposito\n");
+    printf("0 - Sair\n");
+    printf("========================\n");
+    printf("Escolha uma opcao: ");
+}
