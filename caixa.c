@@ -43,3 +43,15 @@ int main() {
 
     return 0;
 }
+// criação das funções do menu
+
+void limparTela() {
+    for (int i = 0; i < 50; i++) {
+        printf("\n");
+    }
+}
+
+void esperarUsuario() {
+    printf("\nPressione ENTER para continuar...");
+    getchar(); 
+}
